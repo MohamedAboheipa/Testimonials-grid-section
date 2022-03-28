@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+}
+.contaniner {
+  display: grid;
+  grid-template-columns: repeat(4, 265px);
+  grid-template-rows: repeat(2, 290px);
+  gap: 20px;
+  margin: 0 auto;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 50vh;
+  transform: translatey(-50%);
+}
+@media (max-width: 376px) {
+  .contaniner {
+    display: block;
+    margin-top: 50px;
+    transform: translatey(0);
+    -webkit-transform: translatey(0);
+    -moz-transform: translatey(0);
+    -ms-transform: translatey(0);
+    -o-transform: translatey(0);
+  }
+}
+.contaniner .box {
+  border-radius: 10px;
+  padding: 30px;
+}
+@media (max-width: 376px) {
+  .contaniner .box {
+    width: 335px;
+    margin-bottom: 20px;
+  }
+}
+.contaniner .box:first-child {
+  grid-area: 1 / 1 / 2 / 3;
+  background-color: hsl(263, 55%, 52%);
+  position: relative;
+  z-index: 2;
+}
+.box img.pattern {
+  position: absolute;
+  right: 85px;
+  top: 0;
+  z-index: -1;
+}
+.contaniner .box:nth-child(2) {
+  background-color: hsl(217, 19%, 35%);
+}
+.contaniner .box:nth-child(3) {
+  grid-area: 1 / 4 / 3 / 5;
+  background-color: hsl(0, 0%, 100%);
+}
+.contaniner .box:nth-child(4) {
+  background-color: hsl(0, 0%, 100%);
+}
+.contaniner .box:last-child {
+  grid-area: 2 / 2 / 3 / 4;
+  background-color: hsl(219, 29%, 14%);
+}
+.contaniner .box .verified {
+  display: flex;
+  align-items: center;
+}
+.contaniner .box .verified img {
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 30px;
+}
+.contaniner .box .verified .name h3 {
+  font-size: 14px;
+  color: hsl(210, 46%, 95%);
+  font-weight: 400;
+}
+.contaniner .box:nth-child(3) .verified .name h3,
+.contaniner .box:nth-child(4) .verified .name h3 {
+  color: hsl(219, 29%, 14%);
+}
+.contaniner .box .verified .name p {
+  font-size: 12px;
+  color: hsl(210deg 46% 95% / 50%);
+}
+.contaniner .box:nth-child(3) .verified .name p,
+.contaniner .box:nth-child(4) .verified .name p {
+  color: hsl(219 29% 14% / 50%);
+}
+.contaniner .box .quotation {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 21px;
+  color: hsl(210, 46%, 95%);
+}
+.contaniner .box:nth-child(3) .quotation,
+.contaniner .box:nth-child(4) .quotation {
+  color: hsl(219, 29%, 14%);
+}
+.contaniner .box:nth-child(4) .quotation {
+  width: 90%;
+}
+.contaniner .box .result {
+  color: hsl(210deg 46% 95% / 70%);
+  font-size: 13px;
+  line-height: 1.5;
+  padding-right: 16px;
+}
+.contaniner .box:nth-child(3) .result,
+.contaniner .box:nth-child(4) .result {
+  color: hsl(219 29% 14% / 70%);
+}
